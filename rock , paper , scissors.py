@@ -13,7 +13,7 @@ if x == 'help':
     print('3- Scissors cut paper = scissors win.')
     print('4- Paper covers rock = paper wins.')
     
-    z = input ('if you want to play write (play) or write (exit) to quit')
+    z = input ('if you want to play write (play) or write any thing to quit')
     
     if z == 'play' :
     
