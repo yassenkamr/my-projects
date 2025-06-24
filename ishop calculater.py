@@ -19,10 +19,12 @@ for i in range(1, total_items + 1):
     while not name.replace (' ', '').isalpha():
         name = input('Please enter a valid name: ')
     
-    price = int(input('Enter price for this item (EGP): '))
+    price = input('Enter price for this item (EGP): ')
 
-    while not str(price).isdigit():
-        price = int(input('Please enter a valid price: '))
+    while not price.isdigit():
+        price = input('Please enter a valid price: ')
+
+    price = int(price)
     
     item_names.append(name)
     item_prices.append(price)
@@ -52,10 +54,12 @@ else:
         add_more = input('Please enter either "yes" or "no": ').lower()
 
     if add_more == 'yes':
-        extra_items = int(input('\nHow many more items do you want to add: '))
+        extra_items = input('\nHow many more items do you want to add: ')
         
-        while not str(extra_items).isdigit():
-            extra_items = int(input('Please enter a valid number: '))
+        while not extra_items.isdigit():
+            extra_items = input('Please enter a valid number: ')
+
+        extra_items = int(extra_items)
 
         for j in range(1, extra_items + 1):
             name = input(f'\nEnter name for extra item #{j}: ')
@@ -63,10 +67,12 @@ else:
             while not name.replace (' ', '').isalpha():
                 name = input('Please enter a valid name: ')
             
-            price = int(input('Enter price for this item (EGP): '))
+            price = input('Enter price for this item (EGP): ')
 
-            while not str(price).isdigit():
-                price = int(input('Please enter a valid price: '))
+            while not price.isdigit():
+                price = input('Please enter a valid price: ')
+
+            price = int(price)
             
             item_names.append(name)
             item_prices.append(price)
@@ -88,4 +94,3 @@ else:
                 print(f'{i + 1}. {item_names[i]}: {item_prices[i]} EGP')
             print('======================')
             print(f'Total: {sum(item_prices)} EGP')
-
