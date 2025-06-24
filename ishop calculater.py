@@ -47,11 +47,13 @@ if done_shopping == 'yes':
 
 else:
     add_more = input('Do you want to add more items? (yes/no): ').lower()
+    
     while add_more not in ['yes', 'no']:
         add_more = input('Please enter either "yes" or "no": ').lower()
 
     if add_more == 'yes':
         extra_items = int(input('\nHow many more items do you want to add: '))
+        
         while not str(extra_items).isdigit():
             extra_items = int(input('Please enter a valid number: '))
 
@@ -76,6 +78,7 @@ else:
 
     if done_after_add == 'yes':
         calculate_total = input('Do you want to calculate your total price? (yes/no): ').lower()
+        
         while calculate_total not in ['yes', 'no']:
             calculate_total = input('Please enter either "yes" or "no": ').lower()
 
